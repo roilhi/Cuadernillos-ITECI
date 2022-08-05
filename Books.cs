@@ -29,10 +29,10 @@ namespace Cuadernillos_ITECI
             {
                 MessageBox.Show("Falta información, favor de completar");
             }
-            else if (tbId.Text.Length < 7)
+            /*else if (tbId.Text.Length < 7)
             {
                 MessageBox.Show("Clave de materia incorrecta, verificar por favor");
-            }
+            }*/
             else
             {
                 try
@@ -61,7 +61,7 @@ namespace Cuadernillos_ITECI
 
         }
 
-        private void Filter() 
+        private void Populate() 
         {
             var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
             var client = new MongoClient(settings);
@@ -103,7 +103,7 @@ namespace Cuadernillos_ITECI
 
         private void cboFiltroModalidad_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Filter();
+            Populate();
         }
         private void Reset() 
         {
@@ -213,6 +213,32 @@ namespace Cuadernillos_ITECI
                 }
             }
 
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void lblLogin_Click(object sender, EventArgs e)
+        {
+            Login Obj = new Login();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void lbUsers_Click(object sender, EventArgs e)
+        {
+            Users Obj = new Users();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void lbDashboard_Click(object sender, EventArgs e)
+        {
+            Dashboard Obj = new Dashboard();
+            Obj.Show();
+            this.Hide();
         }
     }
 }

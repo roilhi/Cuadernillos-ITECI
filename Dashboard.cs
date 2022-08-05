@@ -16,5 +16,31 @@ namespace Cuadernillos_ITECI
         {
             InitializeComponent();
         }
+
+        private void lbLogout_Click(object sender, EventArgs e)
+        {
+            Login Obj = new Login();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void lbBooks_Click(object sender, EventArgs e)
+        {
+            Books Obj = new Books();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void lbUsers_Click(object sender, EventArgs e)
+        {
+            Users Obj = new Users();
+            Obj.Show();
+            this.Hide();
+        }
+
+        private void labelClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

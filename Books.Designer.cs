@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Books));
-            this.label9 = new System.Windows.Forms.Label();
+            this.lblLogin = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -59,13 +59,13 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.lbUsers = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbDashboard = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -84,22 +84,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // label9
+            // lblLogin
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(78, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(129, 23);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Cerrar sesión";
+            this.lblLogin.AutoSize = true;
+            this.lblLogin.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogin.ForeColor = System.Drawing.Color.Transparent;
+            this.lblLogin.Location = new System.Drawing.Point(78, 18);
+            this.lblLogin.Name = "lblLogin";
+            this.lblLogin.Size = new System.Drawing.Size(129, 23);
+            this.lblLogin.TabIndex = 10;
+            this.lblLogin.Text = "Cerrar sesión";
+            this.lblLogin.Click += new System.EventHandler(this.lblLogin_Click);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.panel6.Controls.Add(this.pictureBox6);
-            this.panel6.Controls.Add(this.label9);
+            this.panel6.Controls.Add(this.lblLogin);
             this.panel6.Location = new System.Drawing.Point(0, 450);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(215, 55);
@@ -301,6 +302,7 @@
             this.btnReset.TabIndex = 19;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // BookDGV
             // 
@@ -441,23 +443,24 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.lbUsers);
             this.panel4.Controls.Add(this.pictureBox4);
             this.panel4.Location = new System.Drawing.Point(0, 219);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(215, 55);
             this.panel4.TabIndex = 12;
             // 
-            // label7
+            // lbUsers
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.Transparent;
-            this.label7.Location = new System.Drawing.Point(78, 18);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(86, 23);
-            this.label7.TabIndex = 10;
-            this.label7.Text = "Usuarios";
+            this.lbUsers.AutoSize = true;
+            this.lbUsers.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbUsers.ForeColor = System.Drawing.Color.Transparent;
+            this.lbUsers.Location = new System.Drawing.Point(78, 18);
+            this.lbUsers.Name = "lbUsers";
+            this.lbUsers.Size = new System.Drawing.Size(86, 23);
+            this.lbUsers.TabIndex = 10;
+            this.lbUsers.Text = "Usuarios";
+            this.lbUsers.Click += new System.EventHandler(this.lbUsers_Click);
             // 
             // pictureBox4
             // 
@@ -503,23 +506,24 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.lbDashboard);
             this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Location = new System.Drawing.Point(0, 333);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(215, 55);
             this.panel5.TabIndex = 13;
             // 
-            // label8
+            // lbDashboard
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(78, 18);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 23);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Dashboard";
+            this.lbDashboard.AutoSize = true;
+            this.lbDashboard.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDashboard.ForeColor = System.Drawing.Color.Transparent;
+            this.lbDashboard.Location = new System.Drawing.Point(78, 18);
+            this.lbDashboard.Name = "lbDashboard";
+            this.lbDashboard.Size = new System.Drawing.Size(112, 23);
+            this.lbDashboard.TabIndex = 10;
+            this.lbDashboard.Text = "Dashboard";
+            this.lbDashboard.Click += new System.EventHandler(this.lbDashboard_Click);
             // 
             // pictureBox5
             // 
@@ -596,7 +600,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lblLogin;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label1;
@@ -625,13 +629,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label lbUsers;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbDashboard;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cboModalidad;

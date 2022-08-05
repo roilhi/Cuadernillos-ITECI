@@ -30,31 +30,33 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Users));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tbUsername = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.UsersDGV = new System.Windows.Forms.DataGridView();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnEdit = new System.Windows.Forms.Button();
             this.tbEmail = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.labelClose = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tbName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
+            this.lbLogout = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbDashboard = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lbBooks = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -62,7 +64,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsersDGV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -79,17 +81,19 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkGray;
+            this.panel2.Controls.Add(this.tbUsername);
+            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.dataGridView1);
-            this.panel2.Controls.Add(this.button4);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.UsersDGV);
+            this.panel2.Controls.Add(this.btnReset);
+            this.panel2.Controls.Add(this.btnDelete);
+            this.panel2.Controls.Add(this.btnEdit);
             this.panel2.Controls.Add(this.tbEmail);
             this.panel2.Controls.Add(this.label11);
             this.panel2.Controls.Add(this.tbPassword);
             this.panel2.Controls.Add(this.labelClose);
-            this.panel2.Controls.Add(this.button1);
+            this.panel2.Controls.Add(this.btnAdd);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.tbName);
@@ -99,6 +103,36 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(969, 634);
             this.panel2.TabIndex = 5;
+            // 
+            // tbUsername
+            // 
+            this.tbUsername.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUsername.Location = new System.Drawing.Point(596, 119);
+            this.tbUsername.Name = "tbUsername";
+            this.tbUsername.Size = new System.Drawing.Size(252, 31);
+            this.tbUsername.TabIndex = 25;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.Transparent;
+            this.label12.Location = new System.Drawing.Point(482, 121);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(108, 23);
+            this.label12.TabIndex = 24;
+            this.label12.Text = "Username:";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Transparent;
+            this.label10.Location = new System.Drawing.Point(150, 180);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(68, 23);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "email:";
             // 
             // label4
             // 
@@ -111,52 +145,56 @@
             this.label4.TabIndex = 21;
             this.label4.Text = "Lista de Usuarios:";
             // 
-            // dataGridView1
+            // UsersDGV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 333);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(926, 288);
-            this.dataGridView1.TabIndex = 20;
+            this.UsersDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.UsersDGV.Location = new System.Drawing.Point(18, 333);
+            this.UsersDGV.Name = "UsersDGV";
+            this.UsersDGV.Size = new System.Drawing.Size(926, 288);
+            this.UsersDGV.TabIndex = 20;
+            this.UsersDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UsersDGV_CellContentClick);
             // 
-            // button4
+            // btnReset
             // 
-            this.button4.BackColor = System.Drawing.Color.SeaGreen;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.Window;
-            this.button4.Location = new System.Drawing.Point(631, 232);
-            this.button4.Margin = new System.Windows.Forms.Padding(0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(87, 42);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Reset";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnReset.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnReset.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReset.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnReset.Location = new System.Drawing.Point(631, 232);
+            this.btnReset.Margin = new System.Windows.Forms.Padding(0);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(87, 42);
+            this.btnReset.TabIndex = 19;
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // button3
+            // btnDelete
             // 
-            this.button3.BackColor = System.Drawing.Color.SeaGreen;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.Window;
-            this.button3.Location = new System.Drawing.Point(486, 232);
-            this.button3.Margin = new System.Windows.Forms.Padding(0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(111, 42);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Eliminar";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnDelete.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnDelete.Location = new System.Drawing.Point(486, 232);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(111, 42);
+            this.btnDelete.TabIndex = 18;
+            this.btnDelete.Text = "Eliminar";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // button2
+            // btnEdit
             // 
-            this.button2.BackColor = System.Drawing.Color.SeaGreen;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(337, 232);
-            this.button2.Margin = new System.Windows.Forms.Padding(0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 42);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Editar";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnEdit.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnEdit.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdit.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnEdit.Location = new System.Drawing.Point(337, 232);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(0);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(111, 42);
+            this.btnEdit.TabIndex = 17;
+            this.btnEdit.Text = "Editar";
+            this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // tbEmail
             // 
@@ -195,19 +233,21 @@
             this.labelClose.Size = new System.Drawing.Size(23, 23);
             this.labelClose.TabIndex = 9;
             this.labelClose.Text = "X";
+            this.labelClose.Click += new System.EventHandler(this.labelClose_Click);
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.BackColor = System.Drawing.Color.SeaGreen;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(186, 232);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 42);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnAdd.BackColor = System.Drawing.Color.SeaGreen;
+            this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnAdd.Location = new System.Drawing.Point(186, 232);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(115, 42);
+            this.btnAdd.TabIndex = 7;
+            this.btnAdd.Text = "Agregar";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // label3
             // 
@@ -236,8 +276,18 @@
             this.tbName.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbName.Location = new System.Drawing.Point(224, 72);
             this.tbName.Name = "tbName";
-            this.tbName.Size = new System.Drawing.Size(515, 31);
+            this.tbName.Size = new System.Drawing.Size(624, 31);
             this.tbName.TabIndex = 3;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Cuadernillos_ITECI.Properties.Resources.LOGOITECI_HORIZONTALBLANCO;
+            this.pictureBox1.Location = new System.Drawing.Point(722, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(207, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -249,27 +299,6 @@
             this.label1.Size = new System.Drawing.Size(300, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tienda de Cuadernillos ITECI";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.Transparent;
-            this.label10.Location = new System.Drawing.Point(150, 180);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(68, 23);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "email:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Cuadernillos_ITECI.Properties.Resources.LOGOITECI_HORIZONTALBLANCO;
-            this.pictureBox1.Location = new System.Drawing.Point(722, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(207, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // panel1
             // 
@@ -290,7 +319,7 @@
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.panel6.Controls.Add(this.pictureBox6);
-            this.panel6.Controls.Add(this.label9);
+            this.panel6.Controls.Add(this.lbLogout);
             this.panel6.Location = new System.Drawing.Point(0, 450);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(215, 55);
@@ -306,37 +335,39 @@
             this.pictureBox6.TabIndex = 12;
             this.pictureBox6.TabStop = false;
             // 
-            // label9
+            // lbLogout
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(78, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(129, 23);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Cerrar sesión";
+            this.lbLogout.AutoSize = true;
+            this.lbLogout.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbLogout.ForeColor = System.Drawing.Color.Transparent;
+            this.lbLogout.Location = new System.Drawing.Point(78, 18);
+            this.lbLogout.Name = "lbLogout";
+            this.lbLogout.Size = new System.Drawing.Size(129, 23);
+            this.lbLogout.TabIndex = 10;
+            this.lbLogout.Text = "Cerrar sesión";
+            this.lbLogout.Click += new System.EventHandler(this.lbLogout_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panel5.Controls.Add(this.label8);
+            this.panel5.Controls.Add(this.lbDashboard);
             this.panel5.Controls.Add(this.pictureBox5);
             this.panel5.Location = new System.Drawing.Point(0, 333);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(215, 55);
             this.panel5.TabIndex = 13;
             // 
-            // label8
+            // lbDashboard
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.Transparent;
-            this.label8.Location = new System.Drawing.Point(78, 18);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(112, 23);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Dashboard";
+            this.lbDashboard.AutoSize = true;
+            this.lbDashboard.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDashboard.ForeColor = System.Drawing.Color.Transparent;
+            this.lbDashboard.Location = new System.Drawing.Point(78, 18);
+            this.lbDashboard.Name = "lbDashboard";
+            this.lbDashboard.Size = new System.Drawing.Size(112, 23);
+            this.lbDashboard.TabIndex = 10;
+            this.lbDashboard.Text = "Dashboard";
+            this.lbDashboard.Click += new System.EventHandler(this.lbDashboard_Click);
             // 
             // pictureBox5
             // 
@@ -351,24 +382,24 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.panel3.Controls.Add(this.label6);
+            this.panel3.Controls.Add(this.lbBooks);
             this.panel3.Controls.Add(this.pictureBox3);
             this.panel3.Location = new System.Drawing.Point(0, 109);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(215, 55);
             this.panel3.TabIndex = 11;
             // 
-            // label6
+            // lbBooks
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.SystemColors.WindowFrame;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.Transparent;
-            this.label6.Location = new System.Drawing.Point(78, 18);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 23);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Ejemplares";
+            this.lbBooks.AutoSize = true;
+            this.lbBooks.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.lbBooks.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbBooks.ForeColor = System.Drawing.Color.Transparent;
+            this.lbBooks.Location = new System.Drawing.Point(78, 18);
+            this.lbBooks.Name = "lbBooks";
+            this.lbBooks.Size = new System.Drawing.Size(112, 23);
+            this.lbBooks.TabIndex = 10;
+            this.lbBooks.Text = "Ejemplares";
             // 
             // pictureBox3
             // 
@@ -448,7 +479,7 @@
             this.Text = "Users";
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.UsersDGV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -473,15 +504,15 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView UsersDGV;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.TextBox tbEmail;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox tbPassword;
         private System.Windows.Forms.Label labelClose;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbName;
@@ -491,17 +522,19 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label lbLogout;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbDashboard;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lbBooks;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbUsername;
+        private System.Windows.Forms.Label label12;
     }
 }
