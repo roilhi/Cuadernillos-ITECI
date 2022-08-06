@@ -39,8 +39,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbPassword = new System.Windows.Forms.TextBox();
             this.tbUser = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -168,6 +168,17 @@
             this.tbUser.Name = "tbUser";
             this.tbUser.Size = new System.Drawing.Size(268, 31);
             this.tbUser.TabIndex = 3;
+            this.tbUser.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbUser_KeyDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Cuadernillos_ITECI.Properties.Resources.LOGOITECI_HORIZONTALBLANCO;
+            this.pictureBox1.Location = new System.Drawing.Point(118, 47);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(207, 55);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -179,16 +190,6 @@
             this.label1.Size = new System.Drawing.Size(271, 23);
             this.label1.TabIndex = 1;
             this.label1.Text = "Tienda de Cuadernillos ITECI";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Cuadernillos_ITECI.Properties.Resources.LOGOITECI_HORIZONTALBLANCO;
-            this.pictureBox1.Location = new System.Drawing.Point(118, 47);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(207, 55);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // Login
             // 

@@ -103,7 +103,7 @@ namespace Cuadernillos_ITECI
                     MessageBox.Show("Error en la conexión a la base de datos");
                 }
             }
-            else if (cboModalidad.Text == "semiescolarizado")
+            else if (cboModalidad.Text == "escolarizado" || cboModalidad.Text == "cuatrimestral (SQ)")
             {
                 string claveMateria = tbSerie.Text.Substring(2, 7);
                 var filter = Builders<BsonDocument>.Filter.Eq("id", claveMateria);
@@ -114,6 +114,7 @@ namespace Cuadernillos_ITECI
                     string OldQty = BsonDoc["qty"].ToString();
                     newStock = Convert.ToInt32(OldQty) - 1;
                     var update = Builders<BsonDocument>.Update.Set("qty", Convert.ToString(newStock));
+                    var result = collection.UpdateOne(filter, update);
                 }
                 catch
                 {
@@ -198,7 +199,9 @@ namespace Cuadernillos_ITECI
                         { "materia", tbTitle.Text.Trim()},
                         { "periodo", tbPeriodo.Text.Trim()},
                         { "modalidad", cboModalidad.Text },
-                        { "email", tbMail.Text + "@itecipreparatoria.edu.mx" }
+                        { "email", tbMail.Text + "@itecipreparatoria.edu.mx" },
+                        { "vendedor", lbSeller.Text.Trim() },
+                        { "fecha", DateTime.Now.ToString() }
                     };
                         collection.InsertOne(doc);
                         MessageBox.Show("¡Items guardados!");
@@ -265,7 +268,7 @@ namespace Cuadernillos_ITECI
         private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
             e.Graphics.DrawString("Cuadernillos ITECI", new Font("Century Gothic", 12, FontStyle.Bold), Brushes.Blue, new Point(80, pos));
-            e.Graphics.DrawString("ID Producto Precio Total", new Font("Century Gothic",10,FontStyle.Bold), Brushes.Blue, new Point(26, pos+40));
+            e.Graphics.DrawString("ID           Producto           Cantidad           Precio", new Font("Century Gothic",10,FontStyle.Bold), Brushes.Blue, new Point(26, pos+40));
             foreach(DataGridViewRow row in billDGV.Rows) 
             { 
                 prodid = "" + row.Cells["Column1"].Value;
@@ -274,7 +277,7 @@ namespace Cuadernillos_ITECI
                 tottal = Convert.ToInt32(row.Cells["Column4"].Value);
                 e.Graphics.DrawString("" + prodid, new Font("Century Gothic",8, FontStyle.Bold), Brushes.Blue, new Point(26,pos+60));
                 //e.Graphics.DrawString("" + prodName, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(45, pos));
-                e.Graphics.DrawString("" + prodName, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(106, pos+60));
+                e.Graphics.DrawString("" + prodName, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(136, pos+60));
                 //e.Graphics.DrawString("" + prodprice, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(120, pos));
                 e.Graphics.DrawString("" + prodprice, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(526, pos+60));
                 //e.Graphics.DrawString("" + tottal, new Font("Century Gothic", 8, FontStyle.Bold), Brushes.Blue, new Point(170, pos));

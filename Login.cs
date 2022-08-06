@@ -18,6 +18,8 @@ namespace Cuadernillos_ITECI
         public Login()
         {
             InitializeComponent();
+            tbUser.Select();
+            tbUser.Focus();
         }
 
         private void labelClose_Click(object sender, EventArgs e)
@@ -92,6 +94,15 @@ namespace Cuadernillos_ITECI
             else 
             {
                 MessageBox.Show("Usuario o contraseña incorrectos, favor de verificar");
+            }
+        }
+
+        private void tbUser_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) 
+            {
+                tbPassword.Select();
+                tbPassword.Focus();
             }
         }
 
