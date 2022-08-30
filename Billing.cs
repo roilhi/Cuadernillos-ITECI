@@ -208,12 +208,12 @@ namespace Cuadernillos_ITECI
                         DataGridViewRow newRow = new DataGridViewRow();
                         newRow.CreateCells(billDGV);
                         //n++;
-                        int qty = 1, precio = 100;
+                        int qty = 1, precio = 150;
                         int total = qty * precio;
                         newRow.Cells[0].Value = tbSerie.Text;
                         newRow.Cells[1].Value = tbTitle.Text;
                         newRow.Cells[2].Value = 1;
-                        newRow.Cells[3].Value = 100;
+                        newRow.Cells[3].Value = 150;
                         billDGV.Rows.Add(newRow);
                         updateStock();
                         GrdTotal = GrdTotal + total;
