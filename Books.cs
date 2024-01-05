@@ -63,7 +63,7 @@ namespace Cuadernillos_ITECI
 
         private void Populate() 
         {
-            var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
+            var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb2:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
             var client = new MongoClient(settings);
             var database = client.GetDatabase("Cuadernillos_ITECI");
             var collection = database.GetCollection<BsonDocument>(cboFiltroModalidad.Text);
@@ -154,7 +154,7 @@ namespace Cuadernillos_ITECI
             else
                 try 
                 {
-                    var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
+                    var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb2:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
                     var client = new MongoClient(settings);
                     var database = client.GetDatabase("Cuadernillos_ITECI");
                     var collection = database.GetCollection<BsonDocument>(cboModalidad.Text);
@@ -191,7 +191,7 @@ namespace Cuadernillos_ITECI
             {
                 try
                 {
-                    var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
+                    var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb2:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
                     var client = new MongoClient(settings);
                     var database = client.GetDatabase("Cuadernillos_ITECI");
                     var collection = database.GetCollection<BsonDocument>(cboModalidad.Text);

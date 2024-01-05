@@ -29,7 +29,7 @@ namespace Cuadernillos_ITECI
         private bool rightUser(string userName) 
         { 
             bool isUser = false;
-            var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
+            var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb2:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
             var client = new MongoClient(settings);
             var database = client.GetDatabase("Cuadernillos_ITECI");
             var collection = database.GetCollection<BsonDocument>("usuarios");
@@ -51,7 +51,7 @@ namespace Cuadernillos_ITECI
         private bool rightPassword(string userPassword)
         {
             bool isUser = false;
-            var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
+            var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb2:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
             var client = new MongoClient(settings);
             var database = client.GetDatabase("Cuadernillos_ITECI");
             var collection = database.GetCollection<BsonDocument>("usuarios");
@@ -72,7 +72,7 @@ namespace Cuadernillos_ITECI
         }
         private string GetWholeName(string userName) 
         {
-            var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
+            var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb2:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
             var client = new MongoClient(settings);
             var database = client.GetDatabase("Cuadernillos_ITECI");
             var collection = database.GetCollection<BsonDocument>("usuarios");

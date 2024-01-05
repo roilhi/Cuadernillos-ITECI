@@ -39,7 +39,7 @@ namespace Cuadernillos_ITECI
         {
             bool result = false;
             // string claveMateria = tbSerie.Text.Substring(2, 4);
-            var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
+            var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb2:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
             var client = new MongoClient(settings);
             var database = client.GetDatabase("Cuadernillos_ITECI");
             var collection = database.GetCollection<BsonDocument>("ventas");
@@ -132,7 +132,7 @@ namespace Cuadernillos_ITECI
             else if (cboModalidad.Text == "semiescolarizado") 
             {
                 string claveMateria = tbSerie.Text.Substring(2, 4);
-                var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
+                var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb2:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
                 var client = new MongoClient(settings);
                 var database = client.GetDatabase("Cuadernillos_ITECI");
                 var collection = database.GetCollection<BsonDocument>("claves");
@@ -153,7 +153,7 @@ namespace Cuadernillos_ITECI
             else if (cboModalidad.Text == "escolarizado" || cboModalidad.Text == "cuatrimestral (SQ)") 
             {
                 string claveMateria = tbSerie.Text.Substring(2, 7);
-                var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
+                var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb2:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
                 var client = new MongoClient(settings);
                 var database = client.GetDatabase("Cuadernillos_ITECI");
                 var collection = database.GetCollection<BsonDocument>("claves");
@@ -189,7 +189,7 @@ namespace Cuadernillos_ITECI
                 {
                     try
                     {
-                        var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
+                        var settings = MongoClientSettings.FromConnectionString("mongodb+srv://itecidb2:iteci2021@clusteriteci.rnxhk.mongodb.net/Prepa_ITECI_Ens?connect=replicaSet");
                         var client = new MongoClient(settings);
                         var database = client.GetDatabase("Cuadernillos_ITECI");
                         var collection = database.GetCollection<BsonDocument>("ventas");
